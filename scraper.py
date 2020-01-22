@@ -27,7 +27,7 @@ def create_matches(teams_el_list: list, goals_el_list: list):
     for i in range(1, len(teams_el_list), 2):
         matches.append(
             create_match(
-                home_team=teams_el_list[i-1].getText(), 
+                home_team=teams_el_list[i-1].getText(),
                 away_team=teams_el_list[i].getText(),
                 home_goals=goals_el_list[i-1].getText(),
                 away_goals=goals_el_list[i].getText(),
@@ -38,10 +38,10 @@ def create_matches(teams_el_list: list, goals_el_list: list):
 
 def create_match(home_team: str, away_team: str, home_goals: str, away_goals: str):
     return {
-        'home_team': home_team,
-        'away_team': away_team,
-        'home_goals': home_goals,
-        'away_goals': away_goals,
+        'homeTeam': home_team,
+        'awayTeam': away_team,
+        'homeGoals': home_goals,
+        'awayGoals': away_goals,
     }
 
 def write_json(matches: list):
